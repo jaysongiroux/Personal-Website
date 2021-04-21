@@ -1,28 +1,40 @@
 import React from "react";
+import Greeting from './Greeting'
+import ProjectThumbnail from './ProjectThumbnail'
+import ThreeTileContainer from './ThreeTileContainer'
 
 function Home() {
     return (
         <div className="home">
-            <div className="container">
-                <div className="row align-items-center my-5">
-                    <div className="col-lg-7">
-                        <img
-                            className="img-fluid rounded mb-4 mb-lg-0"
-                            src="http://placehold.it/900x400"
-                            alt=""
-                        />
-                    </div>
-                    <div className="col-lg-5">
-                        <h1 className="font-weight-light">Home</h1>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text
-                            ever since the 1500s, when an unknown printer took a galley of
-                            type and scrambled it to make a type specimen book.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <Greeting />
+            <ThreeTileContainer
+                title={'Feature Projects'}
+                elementOne={<ProjectThumbnail
+                    number={'00. '}
+                    title={'Move Mouse'}
+                    bio={'Move Mouse uses the Azure Kinect Camera and Microsoft body tracking library to recognize hand positions and control the computer\'s mouse movement and buttons. The right hand controls the mouse\'s movements while the left hand controls clicking, dragging, and right clicking. If you click the Linkedin Button below, you can see a demonstration video.'}
+                    image={'./bluebody.jpeg'}
+                    githubUrl={'https://github.com/jaysongiroux/MoveMouse'}
+                    linkedinUrl={'https://www.linkedin.com/feed/update/urn:li:activity:6671834721229537280/'}
+                    languages={['C++', 'Electron.js','Azure Kinect']}
+                />}
+                elementTwo={<ProjectThumbnail
+                    number={'01. '}
+                    title={'Sakai Google Integration'}
+                    bio={'Roger Williams University utilizes Sakai\'s platform to manage student\'s grades, assignments and out-of-classroom communication. Using Sakai\'s REST API I was able to integrate Sakai\'s assignment, calendar, and announcment features into google calendar\'s API. This Python script is able to detect duplicates, create new reminders, and enter assignments into google calendar'}
+                    image={'./google_cal.gif'}
+                    githubUrl={'https://github.com/jaysongiroux/Sakai-Google-integration'}
+                    languages={['Python']}
+                />}
+                elementThree={<ProjectThumbnail
+                    number={'02. '}
+                    title={'Personal Portfolio'}
+                    bio={'This is ironic, This website IS the project! Using React, babel, webpack, and jest. I will be uploading new projects, demos and information as the site gets developed!'}
+                    image={'./react.webp'}
+                    githubUrl={'https://github.com/jaysongiroux/Personal-Website'}
+                    languages={['React', 'Webpack', 'Jest']}
+                />}
+            />
         </div>
     );
 }

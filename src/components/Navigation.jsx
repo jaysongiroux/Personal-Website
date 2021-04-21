@@ -4,22 +4,21 @@ import { Link, withRouter } from "react-router-dom";
 function Navigation(props) {
     return (
         <div className="navigation">
-            <nav className="navbar navbar-expand navbar-dark bg-dark">
+            <nav className="navbar navbar-expand">
                 <div className="container">
                     <Link className="navbar-brand" to="/">
-                        <img className="jg_logo" src="./jg_logo.png" />
-                        <h5>Jason Giroux</h5>
+                        <img alt='' className="jg_logo" src="./jg_logo.png" />
                     </Link>
 
-                    <div>
+                    <div className={'rightContainer my-2 my-lg-0'}>
                         <ul className="navbar-nav ml-auto">
                             <li
                                 className={`nav-item  ${
                                     props.location.pathname === "/" ? "active" : ""
                                     }`}
-                            >
+                                >
                                 <Link className="nav-link" to="/">
-                                    Home
+                                    <div className="number-navbar">00.</div>Home
                                     <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
@@ -29,7 +28,7 @@ function Navigation(props) {
                                     }`}
                             >
                                 <Link className="nav-link" to="/about">
-                                    About
+                                    <div className="number-navbar">01.</div>About
                                 </Link>
                             </li>
                             <li
@@ -38,7 +37,7 @@ function Navigation(props) {
                                     }`}
                             >
                                 <Link className="nav-link" to="/projects">
-                                    Projects
+                                    <div className="number-navbar">02.</div>Projects
                                 </Link>
                             </li>
                             <li
@@ -47,7 +46,17 @@ function Navigation(props) {
                                     }`}
                             >
                                 <Link className="nav-link" to="/contact">
-                                    Contact
+                                    <div className="number-navbar">03.</div>Contact
+                                </Link>
+                            </li>
+
+                            <li
+                                className={`nav-item resumeContainer ${
+                                    props.location.pathname === "/resume" ? "active" : ""
+                                    }`}
+                            >
+                                <Link className="nav-link resume" to="/resume">
+                                    Resume
                                 </Link>
                             </li>
                         </ul>
