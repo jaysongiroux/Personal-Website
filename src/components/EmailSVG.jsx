@@ -3,7 +3,7 @@ import React from "react";
 function EmailSVG() {
     return (
         <a href="mailto:jaysongiroux@gmail.com">
-            <svg className="svg-icon"
+            <svg className="svg-icon emailIcon"
                  role="img"
                  viewBox="0 0 20 20"
             >

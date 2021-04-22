@@ -2,6 +2,7 @@ import React from "react";
 import Greeting from './Greeting'
 import ProjectThumbnail from './ProjectThumbnail'
 import ThreeTileContainer from './ThreeTileContainer'
+import GetInTouch from "./GetInTouch";
 
 function Home() {
     return (
@@ -35,6 +36,7 @@ function Home() {
                     languages={['React', 'Webpack', 'Jest']}
                 />}
             />
+            <GetInTouch />
         </div>
     );
 }

@@ -88,10 +88,58 @@ body {
 }
 
 .greeting {
-  height: 85vh;
+  height: 110vh;
   width: 75%;
   margin:auto;
   padding-top: 120px;
+  padding-bottom:20px;
+}
+
+.boxContainer{
+  /*background-color: #201f1f;*/
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.threeTileContainer{
+  padding-top: 20px;
+}
+.socialMediaLinks {
+  padding-top: 5px;
+}
+
+.socialMediaLinks svg{
+  padding: 5px;
+  height: 30px;
+  transition: .5s;
+}
+
+.emailIcon{
+  transform: translateY(3px);
+}
+
+.footer a{
+  text-decoration: none;
+  transition: .25s;
+}
+
+.footer a:hover{
+  text-decoration: none;
+  color: var(--accent);
+;
+}
+
+.regularSVG svg:hover{
+  stroke: var(--accent);
+}
+.emailIcon {
+  fill:white;
+}
+.emailIcon:hover{
+  fill: var(--accent) !important;
 }
 
 .helloLoaded {
@@ -153,7 +201,6 @@ body {
   padding-top: 40px;
 }
 
-/*animated underline*/
 .small-desc a{
   color: var(--accent);
   transition: .5s;
@@ -231,6 +278,24 @@ body {
   animation: fadeInDown 1s forwards;
 }
 
+.getintouchContainer{
+  padding-top: 150px;
+  text-align: center;
+  height: 60vh;
+}
+
+.intouchsmallbio{
+  font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  color: var(--accent)
+}
+
+.intouchBigBio{
+  font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif !important;
+  font-size: 40px;
+  font-weight: 600;
+  transform: translateY(-6px);
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -269,6 +334,35 @@ body {
 
 .thumbnailImage{
   width: 100%;
+  transition: .5s;
+}
+
+.thumbnailImage:hover {
+  opacity: .5;
+  transform: translateY(-5px);
+}
+
+.longbio{
+  font-size: 15px;
+  margin:auto;
+  width: 40%;
+}
+
+.contactmeButton {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid var(--accent);
+  width: 15%;
+  margin: auto;
+  margin-top: 20px;
+  transition: .5s;
+  color: var(--accent);
+}
+
+.contactmeButton:hover{
+  box-shadow: 0px 0px 5px white;
 }
 
 .thumbnailListContainer {
@@ -304,6 +398,7 @@ body {
 }
 
 .thumbnailBio{
+  font-size: 14px;
   padding-top: 5px;
 }
 
@@ -312,17 +407,17 @@ body {
 }
 
 .tag {
-  padding: 5px 10px 5px 10px;
+  padding-right: 20px;
   display: inline-block;
   font-size: 15px;
   text-align: center;
-  border: 1px solid var(--accent);
-  box-shadow: 0px 0px 2px white;
-  background-color: #212021;
-  border-radius: 4px;
-  color: white;
-  text-wrap: none !important;
+  color: #c1bbc1;
   white-space:nowrap;
+}
+
+.tag div{
+  display: inline-block;
+  color: var(--accent)
 }
 
 .tagcontainerCompartment{
@@ -333,8 +428,16 @@ body {
 }
 
 .container{
-  max-width: 140vh !important
+  max-width: 140vh !important;
 }
+
+@media (max-width: 1360px){
+  .container{
+    width: 80%;
+    /*max-width: 110vh !important;*/
+  }
+}
+
 /* MOBILE */
 @media only screen and (max-device-width: 480px) {
   body{
@@ -345,6 +448,10 @@ body {
   .home{
     width: 120%;
     overflow: hidden
+  }
+
+  .container{
+    width: 100%;
   }
 
   .nav-link{
@@ -449,6 +556,7 @@ body {
     width: 380px;
     height: auto;
   }
+
   .thumbnailBio{
     padding-top: 10px;
     width:85%;

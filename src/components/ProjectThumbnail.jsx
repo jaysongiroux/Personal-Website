@@ -23,33 +23,37 @@ export default class ProjectThumbnail extends Component {
                     <div className={'number'}>{this.props.number}</div>
                     {this.props.title}
                 </h6>
-
-                <img alt={''} className='thumbnailImage' src={this.props.image} />
-                <div className={'languageContainers'}>
-                    <LanguageTag languages={this.props.languages} />
+                <div className={'imageContainer'}>
+                    <a href={this.props.githubUrl}>
+                        <img alt={''} className='thumbnailImage' src={this.props.image}/>
+                    </a>
                 </div>
+                <div className={'boxContainer'}>
+                    <div className={'languageContainers'}>
+                        <LanguageTag languages={this.props.languages} />
+                    </div>
 
-                <div className={'thumbnailBio'}>
-                    {this.props.bio}
+                    <div className={'thumbnailBio'}>
+                        {this.props.bio}
+                    </div>
+
+                    <ul className={'thumbnailListContainer'}>
+                        {this.props.githubUrl &&
+                            <li>
+                                <div className={'icon thumbnailIcon'}>
+                                    <GithubSVG link={this.props.githubUrl}/>
+                                </div>
+                            </li>
+                        }
+                        {this.props.linkedinUrl &&
+                            <li>
+                                <div className={'icon thumbnailIcon'}>
+                                    <LinkedinSVG link={this.props.linkedinUrl}/>
+                                </div>
+                            </li>
+                        }
+                    </ul>
                 </div>
-
-                <ul className={'thumbnailListContainer'}>
-                    {this.props.githubUrl &&
-                        <li>
-                            <div className={'icon thumbnailIcon'}>
-                                <GithubSVG link={this.props.githubUrl}/>
-                            </div>
-                        </li>
-                    }
-                    {this.props.linkedinUrl &&
-                        <li>
-                            <div className={'icon thumbnailIcon'}>
-                                <LinkedinSVG link={this.props.linkedinUrl}/>
-                            </div>
-                        </li>
-                    }
-
-                </ul>
             </div>
         )
     }

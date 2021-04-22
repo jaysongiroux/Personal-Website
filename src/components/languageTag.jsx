@@ -15,7 +15,7 @@ export default class LanguageTag extends Component {
                 languages.push(
                     <div className="tagContainer" key={i}>
                         <div className={'tag'} key={i*10}>
-                            {this.state.languages[i]}
+                            <div>»</div> {this.state.languages[i]}
                         </div>
                     </div>
                 )
