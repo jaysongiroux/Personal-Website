@@ -8,6 +8,10 @@ function Home() {
     return (
         <div className="home">
             <Greeting />
+            <div className={'container'}>
+                <h1 className={'featureProjects'}>Featured Projects</h1>
+            </div>
+
             <ThreeTileContainer
                 title={'Feature Projects'}
                 elementOne={<ProjectThumbnail
@@ -17,7 +21,7 @@ function Home() {
                     image={'./bluebody.jpeg'}
                     githubUrl={'https://github.com/jaysongiroux/MoveMouse'}
                     linkedinUrl={'https://www.linkedin.com/feed/update/urn:li:activity:6671834721229537280/'}
-                    languages={['C++', 'Electron.js','Azure Kinect']}
+                    languages={['C++ / QT5', 'Make/QMake','Kinect']}
                 />}
                 elementTwo={<ProjectThumbnail
                     number={'01. '}
@@ -31,7 +35,7 @@ function Home() {
                     number={'02. '}
                     title={'Personal Portfolio'}
                     bio={'This is ironic, This website IS the project! Using React, babel, webpack, and jest. I will be uploading new projects, demos and information as the site gets developed!'}
-                    image={'./react.webp'}
+                    image={'./react.png'}
                     githubUrl={'https://github.com/jaysongiroux/Personal-Website'}
                     languages={['React', 'Webpack', 'Jest']}
                 />}

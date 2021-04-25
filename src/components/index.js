@@ -6,3 +6,4 @@ export { default as Contact } from "./Contact";
 export {default as Projects} from "./Projects"
 export {default as SideLinks} from "./side-links"
 export {default as ProjectThumbnail} from "./ProjectThumbnail"
+export {default as SideBySide} from "./SideBySide"
