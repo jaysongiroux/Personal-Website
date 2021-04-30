@@ -8,13 +8,16 @@ function sideLinks() {
         <div className="sideLinks">
             <ul>
                 <li className="github icon">
-                    <GithubSVG />
+                    <GithubSVG
+                    link={'https://github.com/jaysongiroux'}/>
                 </li>
                 <li className={'linkedin icon'}>
-                    <LinkedinSVG />
+                    <LinkedinSVG
+                    link={'https://www.linkedin.com/in/jasongiroux/'}/>
                 </li>
                 <li className={'email'}>
-                    <EmailSVG/>
+                    <EmailSVG
+                    link={'mailto:jaysongiroux@gmail.com'}/>
                 </li>
                 <div className={'vertBar'} />
             </ul>

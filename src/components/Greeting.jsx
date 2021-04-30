@@ -5,7 +5,10 @@ class Greeting extends Component{
         super(props);
 
         this.state = {
-            loaded: ""
+            loaded: "",
+            style: {
+                "text-decoration":"none"
+            }
         }
     }
 
@@ -31,9 +34,11 @@ class Greeting extends Component{
                         I currently work at <a href="https://www.ainfosec.com/">Assured Information Security</a> as a Computer Engineer E1 on the Computer Architecture team along with being on various research and devlopment teams. Motivated by making a difference and driven by growing as an engineer!
                     </div>
                     <br />
-                    <div className={this.state.loaded ? "inTouch inTouchLoaded" : "inTouch"}>
-                        Get In Touch!
-                    </div>
+                    <a href={'mailto:jaysongirox@gmail.com'} style={this.state.style}>
+                        <div className={this.state.loaded ? "inTouch inTouchLoaded" : "inTouch"}>
+                            Get In Touch!
+                        </div>
+                    </a>
                 </div>
             );
         } else {

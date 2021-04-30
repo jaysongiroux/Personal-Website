@@ -4,14 +4,14 @@ import { Navigation, Footer, Home, About, Contact, Projects, SideLinks } from ".
 function App() {
   return (
       <div className="App">
-        <Router>
+          <Router>
           <Navigation />
             <SideLinks />
           <Switch>
             <Route path="/" exact component={() => <Home />} />
-            <Route path="/about" exact component={() => <About />} />
-            <Route path="/contact" exact component={() => <Contact />} />
-              <Route path="/projects" exact component={() => <Projects />} />
+            <Route path="/about" component={() => <About />} />
+            <Route path="/contact"  component={() => <Contact />} />
+              <Route path="/projects" component={() => <Projects />} />
           </Switch>
           <Footer />
         </Router>

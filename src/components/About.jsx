@@ -1,15 +1,21 @@
-import React from "react";
+import React from 'react';
 import SideBySide from "./SideBySide"
+import {information} from './data-files/information'
 
 function About() {
+    const style = {
+        "paddingRight":"0"
+    }
     return (
         <div className="about">
-            <div className="container">
-                <SideBySide
-                    left={"I WILL PUT MY BIO HERE"}
-                    right={'./selfPicture.png'}
+                <div className="container" style={style}>
+                    <SideBySide
+                        info={information.bio.paragraphs}
+                        picture={information.bio.picture}
+                        updated={information.bio.updated}
+                        technologies={information.bio.technologies}
                     />
-            </div>
+                </div>
         </div>
     );
 }
