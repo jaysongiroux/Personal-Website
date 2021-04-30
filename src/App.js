@@ -1,20 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Contact, Projects, SideLinks } from "./components";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import {hashHistory} from "react-router-dom"
+import { Navigation, Footer, Home, About, Contact, Projects, SideLinks } from "./components";import {
+    HashRouter,
+    Route,
+} from 'react-router-dom';
+
 function App() {
   return (
       <div className="App">
-          <Router>
+          <HashRouter>
           <Navigation />
             <SideLinks />
-          <Switch>
             <Route path="/" exact component={() => <Home />} />
             <Route path="/about" component={() => <About />} />
             <Route path="/contact"  component={() => <Contact />} />
-              <Route path="/projects" component={() => <Projects />} />
-          </Switch>
+            <Route path="/projects" component={() => <Projects />} />
           <Footer />
-        </Router>
+        </HashRouter>
       </div>
   );
 }

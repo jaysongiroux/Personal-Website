@@ -1,3 +1,4 @@
+yarn build
 git add build
 echo "Commit Message: "
 IFS="" read CommitMessage

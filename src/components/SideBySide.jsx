@@ -25,7 +25,7 @@ export default class SideBySide extends Component {
             <div className={'threeTileContainer container'}>
                 <div className={'row'}>
                     <div className={'col leftside'}>
-                        <img className={'aboutPicture'} src={this.props.picture} />
+                        <img className={'aboutPicture'} alt={''} src={this.props.picture} />
                         {this.props.technologies &&
                         <   LanguageTag languages={this.props.technologies} />
                         }

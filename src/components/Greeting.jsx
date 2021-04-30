@@ -7,7 +7,7 @@ class Greeting extends Component{
         this.state = {
             loaded: "",
             style: {
-                "text-decoration":"none"
+                "textDecoration":"none"
             }
         }
     }

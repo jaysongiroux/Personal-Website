@@ -3,7 +3,7 @@ import React, {Component} from "react"
 export default class GetInTouch extends Component {
     render() {
         const style = {
-            "text-decoration": "none"
+            "textDecoration": "none"
         }
         return (
             <div className={'getintouchContainer'}>
