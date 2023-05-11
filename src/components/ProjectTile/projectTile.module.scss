@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+
+.ProjectTileContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 250px;
+}
+
+.ProjectTileTitle {
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	color: $black-primary;
+	margin-bottom: 6px;
+}
+
+.ProjectTileNumber {
+	color: $blue-accent;
+	font-family: monospace;
+	font-size: 1.3em;
+}
+
+.ProjectTileImage {
+	width: 100% !important;
+	height: 200px !important;
+	object-fit: cover;
+	transition: 0.25s;
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.ProjectTileTechnologies {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 4px;
+	margin-bottom: 12px;
+	&:first-letter {
+		color: $blue-accent;
+	}
+}
+
+.ProjectTileTechnology {
+	margin-right: 6px;
+	font-size: 0.9em;
+	padding: 2px;
+}
+
+.ProjectTileDescription {
+	margin-top: 8px;
+	margin-bottom: 0;
+	font-size: 0.9em;
+}
+
+.ProjectTileLinks {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.ProjectTileLink {
+	transition: 0.25s;
+	&:hover {
+		transform: translateY(-2px);
+		fill: $blue-accent;
+	}
+}
+
+.ProjectTileArrow {
+	color: $blue-accent;
+	margin-right: 2px;
+	font-size: 1.2em;
+}

@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.NavbarItem {
+	text-decoration: none;
+	font-family: monospace;
+	color: black;
+}
+
+.NavbarNumber {
+	color: $blue-accent;
+}

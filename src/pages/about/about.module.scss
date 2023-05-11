@@ -1,0 +1,96 @@
+@import "../../styles/variables.scss";
+
+.AboutContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.AboutPictureContainer {
+	position: relative;
+}
+
+.AboutPictureHero {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 50px;
+	max-width: 1000px;
+
+	p {
+		font-size: 1.1em;
+		line-height: 1.5em;
+	}
+}
+
+.AboutImage {
+	display: inline-block;
+	position: relative;
+	img {
+		object-fit: cover;
+	}
+}
+
+.AboutImage::before {
+	position: absolute;
+	top: 4%;
+	left: 4%;
+	width: 100%;
+	height: 100%;
+	border: 3px solid $blue-accent;
+	content: "";
+}
+
+.AboutDogImage {
+	display: inline-block;
+	position: relative;
+	img {
+		object-fit: cover;
+	}
+}
+
+.AboutDogImage::before {
+	position: absolute;
+	top: -6%;
+	left: -6%;
+	width: 100%;
+	height: 100%;
+	border: 3px solid $blue-accent;
+	content: "";
+}
+
+.colorImageBackground {
+	background-color: $blue-accent;
+	height: 300px;
+	width: 100%;
+	border-top-right-radius: 25%;
+	border-top-left-radius: 25%;
+	// border-radius: 50%;
+	position: absolute;
+	top: 0;
+	// left: 30px;
+	z-index: -1;
+}
+
+.AboutContentContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.AboutHey {
+	font-size: 2.5em;
+	font-weight: 800;
+	margin: 0;
+	color: $blue-accent;
+}
+
+.AboutSecond {
+	color: $blue-accent;
+	font-family: monospace;
+	font-size: 1.75em;
+	font-weight: 200;
+	margin: 0;
+}
