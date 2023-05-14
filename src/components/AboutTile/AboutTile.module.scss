@@ -1,0 +1,80 @@
+@import "../../styles/variables.scss";
+
+.AboutTileContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 100%;
+}
+
+.AboutTileGraphicsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.AboutTileCircle {
+	margin-top: 7px;
+	width: 15px;
+	border-radius: 50%;
+	border: 2px solid lightgray;
+}
+
+.AboutTileLine {
+	height: 100%;
+	width: 0.75px;
+	margin-top: 7px;
+	background-color: lightgray;
+}
+
+.AboutTileTitleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.AboutTileTextContent {
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+.AboutTileTitle {
+	font-weight: 400;
+}
+
+.AboutTileSubtitle {
+	font-weight: 200;
+}
+
+.AboutTileLink {
+	font-weight: 400;
+	color: $blue-accent;
+}
+
+.AboutTileChip {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 20px;
+	border: 1px dashed lightgray;
+	font-size: 0.75em;
+	font-weight: 200;
+}
+
+.AboutTileChipsContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-top: 5px;
+}
+
+.AboutTileDescription {
+	white-space: pre-line;
+}
