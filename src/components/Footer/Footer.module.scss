@@ -1,0 +1,102 @@
+@import "../../styles/variables.scss";
+
+.FooterContainer {
+	background-color: $blue-accent;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 20px;
+	color: white;
+	align-items: center;
+	margin-top: 200px;
+}
+
+.FooterCTABubble {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	background-color: $blue-accent-hover;
+	color: white;
+	padding: 3.5rem 2.5rem;
+	margin: 20px;
+	margin-top: -6rem;
+	border-radius: 10px;
+	align-items: center;
+	gap: 20px;
+	max-width: 1200px;
+	width: 100%;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+	text-align: center;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 2rem 1rem;
+		margin-top: -4rem;
+	}
+}
+
+.FooterJGLogo {
+	margin-top: 20px;
+}
+
+.FooterCTABubbleButton {
+	border: 1px solid white;
+	border-radius: 30px;
+	font-weight: 400;
+	color: white;
+	padding: 0.5em 1.5em;
+	text-transform: none;
+	font-size: 1.2em;
+	width: 100px;
+
+	&:hover {
+		color: lightgray;
+		border: 1px solid lightgray;
+	}
+}
+
+.FooterCTABubbleSection {
+	width: 30%;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.FooterSocialButtonContainer {
+	display: flex;
+	gap: 35px;
+	color: white;
+}
+
+.FooterSocialMediaButton {
+	color: white;
+}
+
+.FooterSocialMediaIconButton {
+	border: 1px solid lightgray;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+	}
+}
+
+.FooterQuote {
+	width: 300px;
+	text-align: center;
+	font-weight: 100;
+	line-height: 1.25em;
+	color: white;
+}
+
+.FooterMetaSections {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.FooterAccentText {
+	color: lightgray;
+}

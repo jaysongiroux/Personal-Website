@@ -3,6 +3,11 @@ import Link from "next/link";
 import styles from "./about.module.scss";
 import AboutTileController from "@/components/AboutTile/AboutTileController";
 import { ExampleSectionProps } from "@/components/AboutTile/types";
+import shelf from "../../assets/book shelves with lights installed.jpg";
+import finishedOffice from "../../assets/finished_office.jpg";
+import aspenOnShelf from "../../assets/aspen on shelf.jpg";
+import campbell from "../../assets/campbell.jpeg";
+import bothDogs from "../../assets/both_dogs.jpg";
 
 const exampleSections: ExampleSectionProps[] = [
 	{
@@ -17,22 +22,31 @@ const exampleSections: ExampleSectionProps[] = [
 				title: "Dog Lover",
 				description:
 					"I have two Beautiful Australian Shepherds named Aspen and Campbell along with being a foster home and trainer for puppies waiting for a new forever home",
+				image: [campbell, bothDogs],
 			},
 			{
 				title: "Builder & Maker",
 				description:
-					"Along with being able to build software, I also enjoy building things with my hands. I recently finished renovating my office to be a more productive work space that can both provide a vast amount of storage for my miscellaneous cables but also be a home for a micro cluster of computers that host a number of containers that manage my house's automation, laptop and desktop backups and zoning audio for each room",
+					"Along with being able to build software, I also enjoy building things with my hands. I recently finished renovating my office to be a more productive work space that can both provide a vast amount of storage for my miscellaneous (but necessary) cables but also be a home for the number of projects I am always working on, like my micro cluster that host a number of containers that manage my house's automation, laptop and desktop backups and zoning audio for each room",
+				image: [shelf, aspenOnShelf, finishedOffice],
 			},
 			{
 				title: "Automotive",
 				description:
-					"I enjoy working on both cars and motorcycles. My most recent project is upgrading the fuel system on my 2008 BMW 1 series to sustain 700 Horse Power.",
+					"I enjoy working on both cars and motorcycles. I own a '08 BMW 135i That I plan on tracking in 2024 and a '08 GSXR 600 I like to take out on the weekend",
 			},
 		],
 	},
 	{
 		title: "Work Experience",
 		blocks: [
+			{
+				title: "Computer Science Curriculum Board Member",
+				subtitle: "Roger Williams University",
+				description:
+					"I am a member of the Computer Science Curriculum Board at Roger Williams University where I help help shape the curriculum for the next generation of computer scientists",
+				chips: ["Verbal Communication", "Teamwork", "Leadership"],
+			},
 			{
 				subtitle: "Full Stack Developer E2",
 				title: "Hometap Equity Partners LLC",
@@ -79,6 +93,25 @@ const exampleSections: ExampleSectionProps[] = [
 				subtitle: "Massachusetts",
 				linkName: "Westborough High School",
 				linkDestination: "https://www.westboroughk12.org/whs",
+			},
+		],
+	},
+	{
+		title: "Volunteer Work",
+		blocks: [
+			{
+				title: "Guest Speaker",
+				subtitle: "Roger Williams University",
+				description:
+					"Guest speaker for the computer science department at Roger Williams University to discuss interviewing, resume construction, early career expectations and an interactive project to learn essential tools such as github, CICD and docker",
+			},
+			{
+				title: "Hack Diversity",
+				subtitle: "Software Engineer Mentor",
+				linkName: "Hack Diversity",
+				linkDestination: "https://www.hackdiversity.com/",
+				description:
+					"Worked Closely with a fellow in college to study computer science get placed at a internship at a fortune 100 company. Resume building, mock interviews for both soft and technical skills, and general guidance.",
 			},
 		],
 	},

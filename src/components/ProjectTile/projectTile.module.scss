@@ -58,13 +58,13 @@
 	display: flex;
 	flex-direction: row;
 	gap: 12px;
+	align-items: center;
 }
 
 .ProjectTileLink {
 	transition: 0.25s;
 	&:hover {
-		transform: translateY(-2px);
-		fill: $blue-accent;
+		color: $blue-accent !important;
 	}
 }
 

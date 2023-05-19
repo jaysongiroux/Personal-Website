@@ -51,7 +51,12 @@ const ProjectTile = (props: ProjectTileProps) => {
 			</div>
 			<div className={styles.ProjectTileLinks}>
 				{props.links.map((link: any, key: number) => (
-					<Link key={key} href={link.url} className={styles.ProjectTileLink}>
+					<Link
+						key={key}
+						href={link.url}
+						style={{ color: "black" }}
+						className={styles.ProjectTileLink}
+					>
 						{link.icon}
 					</Link>
 				))}

@@ -2,12 +2,11 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import NPMIcon from "@/components/Icons/NPM";
-import GithubIcon from "@/components/Icons/Github";
 import ProjectTile from "@/components/ProjectTile/ProjectTile";
 import useViewport from "@/hooks/useViewport";
-import LinkedinIcon from "@/components/Icons/Linkedin";
 import cx from "classnames";
 import { Button, Container, Stack, Typography } from "@mui/material";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +28,7 @@ export default function Home(props: HomeProps) {
 				"A NPM Package for React projects that use Notion as a CMS and want a library to closely mimic Notion's appearance while still allowing styling flexibility, accessibility and a single entry point.",
 			links: [
 				{
-					icon: <GithubIcon />,
+					icon: <GitHub />,
 					url: "https://github.com/jaysongiroux/notion-blocks",
 				},
 				{
@@ -48,7 +47,7 @@ export default function Home(props: HomeProps) {
 				"Designed and documented for beginners that want to learn more about 3D printing, soldering, circuits, and coding. An open source 3D printable macro-pad built with accessible hardware and easy to modify python code to build your very own macro pad.",
 			links: [
 				{
-					icon: <GithubIcon />,
+					icon: <GitHub />,
 					url: "https://github.com/jaysongiroux/pico-macro-pad",
 				},
 			],
@@ -63,11 +62,11 @@ export default function Home(props: HomeProps) {
 				"Ever wanted to control your computer like Iron man? With the swipe and grab of your hand you can now click and drag on your screen using the Azure Kinect 3D camera.",
 			links: [
 				{
-					icon: <GithubIcon />,
+					icon: <GitHub />,
 					url: "https://github.com/jaysongiroux/MoveMouse",
 				},
 				{
-					icon: <LinkedinIcon />,
+					icon: <LinkedIn />,
 					url: "https://www.linkedin.com/feed/update/urn:li:activity:6671834721229537280/",
 				},
 			],

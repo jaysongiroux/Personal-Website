@@ -78,3 +78,28 @@
 .AboutTileDescription {
 	white-space: pre-line;
 }
+
+.AboutTileImageContainer {
+	display: flex;
+	flex-direction: row;
+	// flex-wrap: wrap;
+	width: fit-content;
+	max-width: unset;
+	gap: 12px;
+	margin-top: 4px;
+}
+
+.AboutTileImage {
+	object-fit: cover;
+	border-radius: 2px;
+}
+
+.imagesContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4px;
+	color: $blue-accent;
+	width: fit-content;
+	cursor: pointer;
+}

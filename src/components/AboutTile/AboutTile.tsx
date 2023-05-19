@@ -1,9 +1,23 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { ImageList, ImageListItem, Typography } from "@mui/material";
 import cx from "classnames";
 import Link from "next/link";
 import { AboutTileProps } from "./types";
+import { styled } from "@mui/material/styles";
 import styles from "./AboutTile.module.scss";
+import { InsertPhoto } from "@mui/icons-material";
+import Image from "next/image";
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
+
+const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+	<Tooltip {...props} classes={{ popper: className }} />
+))(() => ({
+	[`& .${tooltipClasses.tooltip}`]: {
+		backgroundColor: "#f5f5f9",
+		maxWidth: "unset",
+		border: "1px solid #dadde9",
+	},
+}));
 
 const AboutTile = (props: AboutTileProps) => {
 	return (
@@ -39,6 +53,38 @@ const AboutTile = (props: AboutTileProps) => {
 						</span>
 					))}
 				</div>
+
+				{props?.image && (
+					<>
+						<HtmlTooltip
+							arrow={true}
+							style={{ maxWidth: "none" }}
+							title={
+								<div className={styles.AboutTileImageContainer}>
+									<ImageList>
+										{props?.image?.map((image, key) => (
+											<ImageListItem key={key}>
+												<Image
+													key={key}
+													className={styles.AboutTileImage}
+													width={175}
+													height={150}
+													alt={"image"}
+													src={image}
+												/>
+											</ImageListItem>
+										))}
+									</ImageList>
+								</div>
+							}
+						>
+							<div className={styles.imagesContainer}>
+								<InsertPhoto />
+								<Typography variant="body2">Images</Typography>
+							</div>
+						</HtmlTooltip>
+					</>
+				)}
 			</div>
 		</div>
 	);
